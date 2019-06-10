@@ -22,45 +22,43 @@
     </header>
 <section id="contenedor">
 <section  class="problema">
-  <h2>Problema: Cálcular la densidad de la Tierra</h2>
+  <h2>Problema: Determinar velocidad con que viaja el telescopio alrededor de la Tierra</h2>
   <p>Descripción:</p>
-  <p>El radio de la Tierra es 6 378 km y su masa es 5.97E24 kg. <br>
-a) ¿Cuál es la densidad promedio de la Tierra?<br>
-b) Si el radio de la Tierra se redujera a una tercera parte y su masa no cambiará, cuál serı́a su densidad?<br>
-c) Si el radio de la Tierra y su masa se redujera a una
-tercera parte, ¿su densidad serı́a la misma? ¿por qué?</p>
+  <p>El telescopio hubbie se encuentra orbitando a 600km sobre la superficie de la Tierra. <br>
+Si la masa de la Tierra es de 5.97x10 24KG y su radio ecuatorial es de 6 378km,<br>
+      determina cual es la velocidad con que viaja el telescopio alrededor de la Tierra.<br>
 </section>
 <section class="formulas">
 <h2>Fórmulas</h2>
-    Densidad = Masa/Volumen<br>
-    Volumen=(4/3)pi*r*r*r
+velocidad2 = Gmtierra/(Rtierra+d)n<br>
 </section>
 <section class="datos">
 <h2>Datos:</h2>
-   m= 5.97E24 Kg. <br>
-   r= 6378 Km.
+   Gmtierra= 5.97E24 Kg. <br>
+   Rtierra= 6378 Km.<br>
+    d= 600km.<br>
 </section>
 <section class="calculos">
 <h2>Solución</h2>
-   <p>a)La densidad de la Tierra es:<br>
-    densidad = 5.97E24 Kg/volumen (m) <br>
-    volumen= (4/3)*pi*(6378000)*(6378000)*(6378000)</p>
+   <p>a)La velocidad con que viaja el telescopio alrededor de la Tierra es:<br>
+    velocidad2 = 5.97E24 Kg. /(6378 Km.+600km.) <br>
+    velocidad
 </section>
 <?php
-     function calcula_densidad(){
-        $PI=3.141592;
-        $masa= 5.97E24;
+     function calcula_velocidad(){
+        $Gmtierra= 5.97E24;
         $radio= 6378e3;
-        $volumen= (4/3)*$PI*$radio*$radio*$radio;
-        $densidad= $masa/$volumen;
-        return $densidad;
+        $d= 600;
+        $velocidad2=$Gmtierra/($radio+$d) ;
+        $velocidad= $√velocidad2;
+        return $velocidad;
      }
 ?>
 <section class="resultado">
 <h2>Resultado:</h2>
 <div id="resultadoA"></div>
 <?php
- print "<h1> resultado: densidad = ".calcula_densidad(). " kg/(metro cubico)</h1>";
+ print "<h1> resultado: densidad = ".calcula_velocidad(). " kg/(kilometro)</h1>";
 ?>
 </section>
 </section>
