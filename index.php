@@ -42,7 +42,7 @@ velocidad2 = Gmtierra/(Rtierra+d)n<br>
 <h2>Solución</h2>
    <p>a)La velocidad con que viaja el telescopio alrededor de la Tierra es:<br>
     velocidad2 = 5.97E24 Kg. /(6378 Km.+600km.) <br>
-    velocidad
+   
 </section>
 <?php
      function calcula_velocidad(){
@@ -50,7 +50,7 @@ velocidad2 = Gmtierra/(Rtierra+d)n<br>
         $radio= 6378e3;
         $d= 600;
         $velocidad2=$Gmtierra/($radio+$d) ;
-        $velocidad= $√velocidad2;
+        $velocidad= sqrt($velocidad2);
         return $velocidad;
      }
 ?>
